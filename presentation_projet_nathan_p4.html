@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="image/icon.png" />
+
+        <title> PAC-MAN in the MAZE </title>
+    </head>
+
+    <body class="projet_body">
+        <header id="p1_projet_header"> 
+            <a href="index.html">
+                PAC-MAN in the MAZE
+            </a>
+        </header>
+
+        <nav id="p1_projet_nav">
+            <ul>
+                <li class="li_nav1" id="p1_projet_nav1"> 
+                    <a href="index.html#presentation_du_jeu"> 
+                        <img src="image/pac1.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du jeu 
+                        </h1>
+                    </a> 
+                </li>
+
+                <li class="li_nav2" id="p1_projet_nav2"> 
+                    <a href="index.html#presentation_du_projet"> 
+                        <img src="image/pac4.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du projet 
+                        </h1> 
+                    </a> 
+                </li>
+
+                <li class="li_nav3" id="p1_projet_nav3"> 
+                    <a href="index.html#evolutions"> 
+                        <img src="image/pac3.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Evolutions
+                        </h1>
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+
+        <section id="p2_projet_section">
+            <h1>
+                Evolution et Pistes
+            </h1>
+
+            <div class="paragraphe">
+                <p>
+                    Concernant le programme, j'avais pensé et commencé une fonction permettant de réduire la fenêtre du programme en icône se plaçant dans la barre des taches, cette piste a été abandonnée en vue de sa complexité et de son utilité. La conception d'une barre de menu dans la fenêtre avait aussi été envisagée mais il s'est avéré être plus pratique et plus joli de créer une page d'accueil possédant un menu. <br> <br>
+                    Pour le sort pousser une chose reste inexpliqué dans la création( ou le repositionnement) du mur: x0 et y0 définissent les coordonnées du personnage donc si l'on veut un  bloc à droite il faut taper x+n, x-n pour un à gauche, y+n pour un en haut et y-n pour un en bas. Cependant lorsqu'on définit les coordonnées permettant à la fonction mur de poser un bloc, celle ci inverse les coordonnées et donc pour x+n pose un bloc à gauche du personnage, pour x-n à droite, pour y+n en bas et pour y-n en haut. <br> <br>
+                    Pour le sort avancer, lors de sa première création le joueur pouvait avancer peut importe s'il y avait un mur devant lui, cela a été corrigé afin d'augmenter la difficulté du jeu. <br>
+                    Une fonction perdre qui s'activait au bout d'un certain nombre de tour avait été aussi envisagée, mais celle ci a été remplacée par un système de point plus adapté.
+                </p>
+
+                <a href="presentation_projet_nathan_p3.html#p1_projet_header"> 
+                    <img src="image/precedent.png" class="img_precedent">
+
+                    <p class="precedent">
+                        Page précedente
+                    </p>
+                </a>
+
+                <a href="presentation_projet_nathan_p5.html#p1_projet_header"> 
+                    <img src="image/suivant.png" class="img_suivant">
+
+                    <p class="suivant">
+                        Page suivante
+                    </p>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>

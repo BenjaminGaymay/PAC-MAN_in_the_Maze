@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="image/icon.png" />
+
+        <title> PAC-MAN in the MAZE </title>
+    </head>
+
+    <body class="projet_body">
+        <header id="p1_projet_header"> 
+            <a href="index.html">
+                PAC-MAN in the MAZE
+            </a>
+        </header>
+
+        <nav id="p1_projet_nav">
+            <ul>
+                <li class="li_nav1" id="p1_projet_nav1"> 
+                    <a href="index.html#presentation_du_jeu"> 
+                        <img src="image/pac1.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du jeu 
+                        </h1>
+                    </a> 
+                </li>
+
+                <li class="li_nav2" id="p1_projet_nav2"> 
+                    <a href="index.html#presentation_du_projet"> 
+                        <img src="image/pac4.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du projet 
+                        </h1> 
+                    </a> 
+                </li>
+
+                <li class="li_nav3" id="p1_projet_nav3"> 
+                    <a href="index.html#evolutions"> 
+                        <img src="image/pac3.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Evolutions
+                        </h1>
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+
+    	<section id="p2_projet_section">
+            <h1>
+                Génération du bloc
+            </h1>
+
+    		<div class="paragraphe paragraphe_presentation">
+
+                <img src="image/list_mur_1.png" class="projet_img_presentation">
+
+                <p>
+                    On génère ici 5 valeurs entre 1 et 4, qui correspondront par la suite à l'un des quatre côté de notre personnage. <br>
+                    On les ajoute ensuite à la liste "list_blocs" qui était vide jusqu'à présent afin de stocker ces valeurs et de les faire lire en temps voulu par le programme.
+                </p>
+
+                <img src="image/list_mur_2.png" class="projet_img_presentation">
+                
+                <p>
+                    Ensuite, j'ai créé la fonction permettant de poser le mur. On assigne à "pos" la valeur du 1er numéro de "list_blocs", puis on utilise un "if" et des "elif" pour rechercher la valeur précédemment tirée au hasard. <br>
+                    Nous apercevons deux boucles "if" imbriquées dans la première, qui sont des ajouts de Guillaume afin d'éviter de placer un bloc en dehors du labyrinthe ou d'en replacer un déjà existant. <br> <br>
+                    Une fois ces conditions réussies, nous appelons la fonction mur() pour placer un bloc à la coordonnée souhaitée (l'un des coté de PACMAN) et nous l'ajoutons à la "list_mur" qui répertorie les murs placés sur le terrain.
+                </p>
+
+                <img src="image/list_mur_3.png" class="projet_img_presentation">
+
+                <p>
+                    Pour finir, on supprime le 1er élément de la "list_blocs" car le bloc a été placé, et on retire une nouvelle valeur entre 1 et 4 qui viendra se placer à la fin de la liste. <br> <br>
+                    On exécute ensuite la fonction info() qui permet d'afficher les positions des 5 prochains blocs à l'utilisateur.
+                </p>
+
+                <a href="presentation_projet_benjamin_p2.html#p1_projet_header"> 
+                    <img src="image/precedent.png" class="img_precedent">
+
+                    <p class="precedent">
+                        Page précedente
+                    </p>
+                </a>
+
+                <a href="presentation_projet_benjamin_p4.html#p1_projet_header"> 
+                    <img src="image/suivant.png" class="img_suivant">
+
+                    <p class="suivant">
+                        Page suivante
+                    </p>
+                </a>
+            </div>
+    	</section>
+    </body>
+</html>

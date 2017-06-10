@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="image/icon.png" />
+
+        <title> PAC-MAN in the MAZE </title>
+    </head>
+
+    <body class="projet_body">
+        <header id="p1_projet_header"> 
+            <a href="index.html">
+                PAC-MAN in the MAZE
+            </a>
+        </header>
+
+        <nav id="p1_projet_nav">
+            <ul>
+                <li class="li_nav1" id="p1_projet_nav1"> 
+                    <a href="index.html#presentation_du_jeu"> 
+                        <img src="image/pac1.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du jeu 
+                        </h1>
+                    </a> 
+                </li>
+
+                <li class="li_nav2" id="p1_projet_nav2"> 
+                    <a href="index.html#presentation_du_projet"> 
+                        <img src="image/pac4.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du projet 
+                        </h1> 
+                    </a> 
+                </li>
+
+                <li class="li_nav3" id="p1_projet_nav3"> 
+                    <a href="index.html#evolutions"> 
+                        <img src="image/pac3.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Evolutions
+                        </h1>
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+
+        <section id="p2_projet_section">
+            <h1>
+                Sort Sauter
+            </h1>
+
+            <div class="paragraphe">
+                <p>
+                    Pour l'organisation des fonctions du sort sauter, elle est similaire à celle du sort Pousser: <br>
+                    - Dans la première fonction on vérifie dans un premier temps si le cooldown propre au sort n'est pas actif, si ce n'est pas le cas alors on vérifie si les quatre cases derrière les quatre cases qui entourent le personnage ne possèdent pas de mur. 
+                </p>
+
+                <img src="image/sort_sauter_1.png" class="projet_img_presentation">
+
+                <p>
+                    On crée ensuite les blocs de sélections sur les cases ayant vérifié la condition précédente. <br>
+                    - Cela nous amène donc ensuite sur la deuxième fonction qui comme pour le sort Pousser reprend les coordonnées de la souris que l'on stock a nouveau dans une variable, ces coordonnées nous orientent une nouvelle fois vers la fonction correspondant à la position choisie. Dans cette fonction on vérifie ensuite si les coordonnées  de la souris sont bien sur une case vide, si c'est le cas alors on reprend la fonction permettant d'avancer qui transforme les coordonnées du personnage en ceux de la souris le déplaçant ainsi de deux cases. 
+                </p>
+
+                <img src="image/sort_sauter_2.png" class="projet_img_presentation">
+
+                <p>
+                   Si les coordonnées sont sur une case contenant un mur alors la fonction est annulée. La fonction est ensuite inclue dans la fonction choix des sorts.
+                </p>
+
+                <a href="presentation_projet_nathan_p2.html#p1_projet_header"> 
+                    <img src="image/precedent.png" class="img_precedent">
+
+                    <p class="precedent">
+                        Page précedente
+                    </p>
+                </a>
+
+                <a href="presentation_projet_nathan_p4.html#p1_projet_header"> 
+                    <img src="image/suivant.png" class="img_suivant">
+
+                    <p class="suivant">
+                        Page suivante
+                    </p>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>

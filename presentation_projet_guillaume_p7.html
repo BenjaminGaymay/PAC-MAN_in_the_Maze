@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="image/icon.png" />
+
+        <title> PAC-MAN in the MAZE </title>
+    </head>
+
+    <body class="projet_body">
+        <header id="p1_projet_header"> 
+            <a href="index.html">
+                PAC-MAN in the MAZE
+            </a>
+        </header>
+
+        <nav id="p1_projet_nav">
+            <ul>
+                <li class="li_nav1" id="p1_projet_nav1"> 
+                    <a href="index.html#presentation_du_jeu"> 
+                        <img src="image/pac1.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du jeu 
+                        </h1>
+                    </a> 
+                </li>
+
+                <li class="li_nav2" id="p1_projet_nav2"> 
+                    <a href="index.html#presentation_du_projet"> 
+                        <img src="image/pac4.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du projet 
+                        </h1> 
+                    </a> 
+                </li>
+
+                <li class="li_nav3" id="p1_projet_nav3"> 
+                    <a href="index.html#evolutions"> 
+                        <img src="image/pac3.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Evolutions
+                        </h1>
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+
+    	<section id="p2_projet_section">
+            <h1>
+                Fonctionnement actuel de la création du terrain 
+            </h1>
+
+            <div class="paragraphe paragraphe_presentation">
+
+                <p>
+                    Le terrain est généré à chaque début de partie d'une manière semi-aleatoire. <br> Nous avons choisi ce fonctionnement de création de terrain, car il permet d'obtenir un terrain unique et nouveau à chaque partie. Le mode semi-aleatoire permet d’assurer un terrain resolvable et jouable. <br> <br>
+                    Le terrain de jeux est composé de 24 cases sur 24 cases. J'ai donc créé différents modèles de chemin de 3 cases de hauteurs sur 3 cases de longueur. <br>
+                    Pour générer l'apparition de ces blocs, j'ai utilisé deux boucles " For " imbriqués. Celles-ci me permettent de parcourir mon plateau de jeu et de poser un modèle toutes les 3 cases :
+                </p>
+
+                <img src="image/terrain_1.png" class="projet_img_presentation">
+
+                <p>
+                    Liste des différents modèles de chemin (en 3x3) :
+                </p>
+
+                <img src="image/terrain_2.png" class="projet_img_presentation">
+
+                <p>
+                    Dans l'ensemble des modèles, un motif se répète à chaque fois : ce sont les blocs aux quatre coins. <br>
+                    Pour la création de chaque modèles, il faut donc créer en premier lieu les quatre blocs des extrémités :
+                </p>
+
+                <img src="image/terrain_3.png" class="projet_img_presentation">
+
+                <p>
+                    Par la suite, il faut pouvoir être capable de conserver les coordonnées de chaque mur (pour la gestion des collisions entre le PAC-MAN et les murs) d'où la déclaration de la variable " listmur " :
+
+                </p>
+
+                <img src="image/terrain_4.png" class="projet_img_presentation">
+
+                <p>
+                    Le bloc principal contenant quatre sorties est créé. Ce bloc étant celui proposant le plus de chemin, il faut donc le générer un nombre de fois supérieur aux autres. <br>
+                    J'utilise pour ce faire un système de probabilité. J'ai établi la fréquence d'apparition de ce modèle à une chance sur deux. <br>
+                    Cette probabilité d'apparition a été choisie après avoir généré un grand nombre de terrains et testé à plusieurs reprises la jouabilité du jeu. 
+                </p>
+
+                <img src="image/terrain_5.png" class="projet_img_presentation">
+
+                <p>
+                    Par la suite, le programme doit tirer au hasard un nombre entre 1 et 8 pour générer un des 8 modèles.
+                </p>
+
+                <img src="image/terrain_6.png" class="projet_img_presentation">
+
+                <p>
+                    Une fois le modèle choisi, l'ordinateur génère les nouveaux blocs et inclus leurs coordonnées dans la liste nommée " listmur ".
+                </p>
+
+                <img src="image/terrain_7.png" class="projet_img_presentation">
+                
+                <a href="presentation_projet_guillaume_p6.html#p1_projet_header"> 
+                    <img src="image/precedent.png" class="img_precedent">
+
+                    <p class="precedent">
+                        Page précédente
+                    </p>
+                </a>
+
+                <a href="presentation_projet_guillaume_p8.html#p1_projet_header"> 
+                    <img src="image/suivant.png" class="img_suivant">
+
+                    <p class="suivant">
+                        Page suivante
+                    </p>
+                </a>
+            </div>
+    	</section>
+    </body>
+</html>

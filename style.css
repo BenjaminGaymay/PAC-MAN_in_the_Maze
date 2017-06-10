@@ -1,0 +1,1344 @@
+
+html{
+	height: 100%; /* Les valeurs en % se réfèrent à la taille des balises "parents" */
+	width: 100%; /* on leur fixe leur valeur à 100% pour pouvoir indiquer la taille des "enfants" */
+}
+
+/* BODY */
+
+body{
+	width: 100%; /* Le BODY prend 100% de la largeur de l'écran */
+	height: 100%; /* Le BODY prend 100% de la hauteur de l'écran */
+	font-family: cursive, Tahoma, Helvetica; /* Police utilisée par l'ensemble du BODY */
+	margin: auto; /* On centre le BODY */
+	background-color : black ; /* Le fond est noir */
+	background-size: 100% 100%; /* Sur toute la surface du BODY */
+	text-decoration: none; /* On supprime la décoration des textes (Liens soulignés entre autre) */
+	overflow: hidden; /* On cache ce qui ne peut être afficher dans ta place de l'écran */
+}	
+
+.projet_body{
+	overflow-y: scroll;
+}
+
+#retour_menu{
+	position: fixed;
+	left: 92%;
+	bottom: 3%;
+}
+
+#retour_menu img{
+	width: 80%;
+	height: auto;
+	-webkit-filter: brightness(50%);
+	-webkit-transition: all 0.3s ease;
+}
+
+#retour_menu:hover img{
+	-webkit-filter: brightness(100%);
+}
+
+#retour_menu p{
+	visibility: hidden;
+	text-shadow: 0 0.5px 0 rgb(230,180,70),
+             0 1px 0 rgb(210,160,50),
+             -0.5px 1.5px 0 rgb(190,140,30),
+             -0.5px 2px 0 rgb(160,110,0),
+             -1px 2.5px 0 rgb(150,100,0),
+             -1px 3px 0 rgb(140,90,0),
+             -1px 3.5px 1px rgba(0,0,0, 0.5),
+             -1px 3.5px 4px rgba(0,0,0, 0.1),
+             -1px 3.5px 22.5px rgba(0,0,0, 0.3);
+    position: relative;
+    margin-top: -70%;
+    margin-left: -10%;
+    font-size: 20px;
+    color: #F8C55B;
+}
+
+#retour_menu:hover p{
+	visibility: visible;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* HEADER */
+
+header{
+	color : rgb(255,255,0);
+	font-size: 55px; /* Taille du texte du HEADER */
+	text-align: center; /* On centre le texte dans le HEADER */
+	margin-top : 1.5%; /* Marge extérieure vers le haut */
+	text-shadow: 0 1px 0 rgb(220,220,0),
+             0 2px 0 rgb(200,200,0),
+             -1px 3px 0 rgb(180,180,0),
+             -1px 4px 0 rgb(150,150,0),
+             -2px 5px 0 rgb(140,140,0),
+             -2px 6px 0 rgb(130,130,0),
+             -2px 7px 2px rgba(0,0,0, 0.5),
+             -2px 7px 8px rgba(0,0,0, 0.1),
+             -2px 7px 45px rgba(0,0,0, 0.3); /* On créé plusieurs ombres sous le titres (décalées) pour faire l'effet de profondeur */
+}
+
+header a{
+	color: #FFFF00;
+}
+
+#p1_projet_header{
+	margin-bottom: -5%;
+}
+
+/* NAVIGATION */
+
+nav{
+	text-align: center; 
+	margin-top: 10%;
+}
+
+nav ul li{
+	display: inline-block; /* Chaque LI de la liste UL devient un élément de type Block et ne se place plus en dessous de son prédécesseur mais à sa droite */
+	list-style: none;
+	margin: auto;
+}
+
+nav li a{
+	text-decoration: none; /* Aucunes décorations (les liens ne sont pas soulignés) */
+	color: white;
+	-webkit-filter: brightness(50%); /* Filtre qui réduit la luminosité */
+}
+
+nav li a:hover{
+	-webkit-filter: brightness(100%);
+	-webkit-transition: all 0.3s ease; /* Délai de 0.3 seconde entre l'état avant/après le hover */
+}
+
+nav ul li a h1{
+	font-size: 30px;
+	position: relative;
+	visibility: hidden;
+	margin-top: -80%;
+	z-index: 1; /* Plus le numéro est faible plus la balise se trouve sur le dessus (ne fonctionne que pour des éléments au même niveau de parenté) */
+}
+
+nav ul li a:hover h1{
+	visibility: visible;
+	z-index: 1;
+
+}
+
+.img_nav{
+	width: 100%;
+	height: auto;
+	z-index: 2;
+}
+
+.li_nav1 h1{
+	color: #FFFF00;
+	text-shadow: 0 0.5px 0 rgb(220,220,0),
+             0 1px 0 rgb(200,200,0),
+             -0.5px 1.5px 0 rgb(180,180,0),
+             -0.5px 2px 0 rgb(150,150,0),
+             -1px 2.5px 0 rgb(140,140,0),
+             -1px 3px 0 rgb(130,130,0),
+             -1px 3.5px 1px rgba(0,0,0, 0.5),
+             -1px 3.5px 4px rgba(0,0,0, 0.1),
+             -1px 3.5px 22.5px rgba(0,0,0, 0.3);
+}
+
+.li_nav2 h1{
+	color: rgb(126,154,211);
+	text-shadow: 0 0.5px 0 rgb(105,135,190),
+             0 1px 0 rgb(85,125,170),
+             -0.5px 1.5px 0 rgb(55,95,140),
+             -0.5px 2px 0 rgb(45,85,130),
+             -1px 2.5px 0 rgb(35,75,120),
+             -1px 3px 0 rgb(25,65,110),
+             -1px 3.5px 1px rgba(0,0,0, 0.5),
+             -1px 3.5px 4px rgba(0,0,0, 0.1),
+             -1px 3.5px 22.5px rgba(0,0,0, 0.3);
+}
+
+.li_nav3 h1{
+	color: rgb(219,148,219);
+	text-shadow: 0 0.5px 0 rgb(200,130,200),
+             0 1px 0 rgb(180,110,180),
+             -0.5px 1.5px 0 rgb(150,80,140),
+             -0.5px 2px 0 rgb(140,70,140),
+             -1px 2.5px 0 rgb(130,60,130),
+             -1px 3px 0 rgb(120,50,120),
+             -1px 3.5px 1px rgba(0,0,0, 0.5),
+             -1px 3.5px 4px rgba(0,0,0, 0.1),
+             -1px 3.5px 22.5px rgba(0,0,0, 0.3);
+}
+
+.li_nav4 h1{
+	color: rgb(116,209,116);
+	text-shadow: 0 0.5px 0 rgb(100,190,100),
+             0 1px 0 rgb(80,170,80),
+             -0.5px 1.5px 0 rgb(50,140,50),
+             -0.5px 2px 0 rgb(40,130,40),
+             -1px 2.5px 0 rgb(30,120,30),
+             -1px 3px 0 rgb(20,110,20),
+             -1px 3.5px 1px rgba(0,0,0, 0.5),
+             -1px 3.5px 4px rgba(0,0,0, 0.1),
+             -1px 3.5px 22.5px rgba(0,0,0, 0.3);
+}
+
+.p1_projet_img_nav{
+	width: 30%;
+	height: auto;
+	z-index: 2;
+}
+
+#p1_projet_nav ul li a h1{
+	font-size: 20px;
+	position: relative;
+	visibility: hidden;
+	margin-top: -30%;
+	z-index: 1;
+}
+
+#p1_projet_nav ul li a:hover h1{
+	visibility: visible;
+}
+
+#p1_projet_nav1{
+	position: fixed;
+	top: 20%;
+	left: -2%;
+}
+
+#p1_projet_nav2{
+	position: fixed;
+	top: 50%;
+	left: -2%;
+}
+
+#p1_projet_nav3{
+	position: fixed;
+	top: 80%;
+	left: -2%;
+}
+
+/* CONTENEUR */
+
+#p2_projet_section h2{
+	text-align: center;
+}
+
+.p_index_section{
+	margin: auto;
+	margin-top: 80%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.p_index_section h1{
+	position: relative;
+	color: #FFFF00;
+	padding-top: 1%;
+	font-size: 50px;
+	text-shadow: 0 1px 0 rgb(220,220,0),
+              0 2px 0 rgb(200,200,0),
+             -1px 3px 0 rgb(180,180,0),
+             -1px 4px 0 rgb(150,150,0),
+             -2px 5px 0 rgb(140,140,0),
+             -2px 6px 0 rgb(130,130,0),
+             -2px 7px 2px rgba(0,0,0, 0.5),
+             -2px 7px 8px rgba(0,0,0, 0.1),
+             -2px 7px 45px rgba(0,0,0, 0.3);
+    text-align: center;
+}
+
+.p_index_section .paragraphe{
+	margin: 1% 10% 5% 10%;
+	padding: 1% 1% 1% 1%;
+	border: double rgb(24,24,255) 9px;
+	border-radius: 10px;
+	color: #FFFF00;
+	text-align: justify;
+	font-size: 20px;
+}
+
+
+.p_index_section .img_presentation{
+	float: left;
+	width: 25%;
+	height: auto;
+	margin: 5% 0 15% 16%;
+	border: double rgb(24,24,255) 9px;
+	border-radius: 10px;
+	-webkit-transition: all 0.5s ease;
+}
+
+
+
+.p_index_section .img_presentation:hover{
+	-webkit-transform: scale(1.8);
+	-webkit-transition: all 0.5s ease;
+	margin-top: -5%;
+}
+
+
+#evolutions{
+	height: 100%;
+}
+
+#evolutions #index_img_evolution{
+	margin: 5% auto 5% auto;
+	width: 40%;
+	height: auto;
+	display: block;
+	border-radius: 7px;
+}
+
+#evolutions #index_img_evolution:hover{
+	-webkit-transform: scale(1.8);
+	-webkit-transition: all 0.3s ease;
+}
+
+.p_evolution{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#p1_projet_section{
+	margin-top: 5%;
+	overflow: hidden;
+}
+
+#p1_projet_section ul li{
+	margin: auto;
+	text-align: center;
+	border: double rgb(24,24,255) 9px;
+	border-radius: 10px;
+	color: #FFFF00;
+	list-style: none;
+	font-size: 45px;
+	margin: 2% 0 5% 0;
+	padding: 1% 0 1% 0;
+	background-image: url("image/pac.png");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: 1%;
+}
+
+#p1_projet_section ul{
+	margin: 0 20% 0 20%;
+}
+
+#p1_projet_section ul li{
+	color: #FFFF00;
+	-webkit-transition: all 0.5s ease;
+}
+
+#p1_projet_section ul li:hover{
+	border: double #FFFF00 9px;
+	border-radius: 10px;
+	-webkit-transition: all 1s ease;
+	background-position: 99%;
+	color: rgb(24,24,255);
+}
+
+
+#p1_projet_section ul li img{
+	height: auto;
+	width: 7%;
+}
+
+#p2_projet_section{
+	margin: 5% auto 5% auto;
+}
+
+#p2_projet_section .paragraphe{
+	margin: 1% 20% 0 20%;
+	padding: 1% 1% 1% 1%;
+	border: double rgb(24,24,255) 9px;
+	border-radius: 10px;
+	color: #FFFF00;
+	text-align: justify;
+	font-size: 20px;
+}
+
+.paragraphe_h2_2nd{
+	margin-top: 10%;
+}
+
+.suivant{
+	position: relative;
+	opacity: 0;
+	float: right;
+	margin-top: -1.5%;
+	margin-right: 0.5%;
+	z-index: 1;
+	height: 0;
+	overflow: hidden;
+	color: rgb(24,24,255);
+	-webkit-transition: all 0.3s ease;
+}
+
+a:hover .suivant{
+	opacity: 1;
+	height: auto;
+}
+
+.img_suivant{
+	position: relative;
+	margin-top: -1.5%;
+	float: right;
+	width: 4%;
+	height: auto;
+	-webkit-filter: brightness(50%);
+}
+
+a:hover .img_suivant{
+	-webkit-filter: brightness(100%);
+	-webkit-transform: scale(1.4);
+	-webkit-transition: all 0.3s ease;
+}
+
+#p2_projet_section .precedent{
+	position: relative;
+	opacity: 0;
+	float: left;
+	margin-top: -1.5%;
+	margin-right: 0.5%;
+	z-index: 1;
+	height: 0;
+	overflow: hidden;
+	color: rgb(24,24,255);
+	-webkit-transition: all 0.3s ease;
+}
+
+#p2_projet_section a:hover .precedent{
+	opacity: 1;
+	height: auto;
+}
+
+#p2_projet_section .paragraphe .img_precedent{
+	position: relative;
+	margin-top: -1.5%;
+	float: left;
+	width: 4%;
+	height: auto;
+	-webkit-filter: brightness(50%);
+}
+
+#p2_projet_section .paragraphe a:hover .img_precedent{
+	-webkit-filter: brightness(100%);
+	-webkit-transform: scale(1.4);
+	-webkit-transition: all 0.3s ease;
+}
+
+
+#p2_projet_section h1{
+	position: relative;
+	color: #FFFF00;
+	padding-top: 1%;
+	font-size: 50px;
+	text-shadow: 0 1px 0 rgb(220,220,0),
+              0 2px 0 rgb(200,200,0),
+             -1px 3px 0 rgb(180,180,0),
+             -1px 4px 0 rgb(150,150,0),
+             -2px 5px 0 rgb(140,140,0),
+             -2px 6px 0 rgb(130,130,0),
+             -2px 7px 2px rgba(0,0,0, 0.5),
+             -2px 7px 8px rgba(0,0,0, 0.1),
+             -2px 7px 45px rgba(0,0,0, 0.3);
+    text-align: center;
+    margin: 0 15% 0 15%;
+}
+
+.projet_img_presentation{
+	width: 50%;
+	height: auto;
+	display: block;
+	margin: auto;
+	border-radius: 7px;
+}
+
+.projet_img_presentation:hover{
+	-webkit-transform: scale(2);
+	-webkit-transition: all 0.3s ease;
+}
+
+.projet_img_presentation_grand{
+	width: 50%;
+	height: auto;
+	display: block;
+	margin: auto;
+	border-radius: 7px;
+}
+
+.projet_img_presentation_grand:hover{
+	-webkit-transform: scale(1.5);
+	-webkit-transition: all 0.3s ease;
+}
+
+#p2_projet_section a{
+	color: #FFFF00;
+}
+
+#p2_projet_section a:hover{
+	color: #888800;
+}
+
+
+@media screen and (max-width: 479px){ /* Partie utilisée pour la résolution d'écran indiquée */
+
+/* BODY */
+
+body{
+	font-family: Tahoma, Helvetica;
+}
+
+#retour_menu{
+	margin-left: -12%;
+}
+
+#retour_menu p{
+    margin-left: -30%;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -100%;
+    padding-bottom: 5%;
+}
+
+/* HEADER */
+
+header{
+	padding: 0 10% 0 10%;
+	font-size: 27px;
+	margin-bottom: 50%;
+}
+
+/* NAVIGATION */
+
+.img_nav{
+	width: 80px; /* On défini une largeur */
+	height: auto;  /* La hauteur s'adapte automatiquement par rapport à la largeur */
+}
+
+nav ul li a h1{
+	font-size: 15px;
+}
+
+.li_nav1{
+	position: absolute; /* Position absolue par rapport au parent, ici UL */
+	top: 35%; /* Distance par rapport au haut */
+	left: 20%; /* Distance par rapport à la gauche */
+}
+
+.li_nav1 h1{
+	position: absolute;
+	top: 30%;
+	left: -5%;
+}
+
+.li_nav2{
+	position: absolute;
+	top: 35%;
+	left: 60%;
+}
+
+.li_nav2 h1{
+	position: absolute;
+	top: 30%;
+	left: -5%;
+}
+
+.li_nav3{
+	position: absolute;
+	top: 65%;
+	left: 20%;
+}
+
+.li_nav3 h1{
+	position: absolute;
+	top: 40%;
+	left: 5%;
+}
+
+.li_nav4{
+	position: absolute;
+	top: 65%;
+	left: 60%;
+}
+
+.li_nav4 h1{
+	position: absolute;
+	top: 30%;
+	left: -25%;
+}
+
+#p1_projet_nav ul li a h1{
+	font-size: 15px;
+}
+
+.p1_projet_img_nav{
+	visibility: hidden;
+}
+
+#p1_projet_nav ul li a h1{
+	visibility: visible;
+}
+
+#p1_projet_nav1{
+	left: -8%;
+	top: 15%;
+	position: absolute;
+}
+
+#p1_projet_nav2{
+	left: -5%;
+	top: 20%;
+	position: absolute;
+}
+#p1_projet_nav3{
+	left: -29.5%;
+	top: 25%;
+	position: absolute;
+}
+
+/* CONTENEUR */
+
+.p_index_section{
+	margin-top: 200%;
+	padding: 0 10% 0 10%;
+	height: 100%;
+}
+
+.p_index_section h1{
+	font-size: 20px;
+	text-shadow: 0 0.5px 0 rgb(220,220,0),
+             0 1px 0 rgb(200,200,0),
+             -0.5px 1.5px 0 rgb(180,180,0),
+             -0.5px 2px 0 rgb(150,150,0),
+             -1px 2.5px 0 rgb(140,140,0),
+             -1px 3px 0 rgb(130,130,0),
+             -1px 3.5px 1px rgba(0,0,0, 0.5),
+             -1px 3.5px 4px rgba(0,0,0, 0.1),
+             -1px 3.5px 22.5px rgba(0,0,0, 0.3);
+}
+
+#presentation_du_jeu{
+	margin-top: 150%;
+}
+
+section .paragraphe{
+	font-size: 12px;
+	margin-top: -1%;
+	border: double rgb(24,24,255) 6px;
+}
+
+section .suivant{
+	font-size: 10px;
+	margin-top: -8%;
+	margin-right: 8%;
+}
+
+section .paragraphe a img{
+	margin-top: -6%;
+	width: 15px;
+	height: auto;
+}
+
+section .paragraphe a:hover img{
+	-webkit-transform: scale(1.6);
+}
+
+section .img_presentation{
+	width: 23%;
+	border: double rgb(24,24,255) 6px;
+}
+
+section .img_presentation:hover{
+	-webkit-transform: scale(2.5);
+	-webkit-transition: all 0.5s ease;
+	margin-top: -5%;
+}
+
+#p1_projet_section ul a li{
+	background: none;
+	font-size: 20px;
+	z-index: -1;
+}
+
+#p1_projet_section{
+	margin: 50% -15% 0 -15%;
+}
+
+#p1_projet_section ul li{
+	margin-bottom: 20%;
+}
+
+#p2_projet_section{
+	margin: 35% -5% 2% -5%;
+}
+
+#p2_projet_section h1{
+	font-size: 30px;
+}
+
+#p2_projet_section p{
+	font-size: 15px;
+}
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 638px){
+/* BODY */
+
+body{
+	font-family: Tahoma, Helvetica;
+}
+
+#retour_menu{
+	margin-left: -2%;
+}
+
+#retour_menu p{
+    margin-left: -25%;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -100%;
+    padding-bottom: 15%;
+}
+
+/* HEADER */
+
+header{
+	padding: 0 10% 0 10%;
+	font-size: 40px;
+}
+
+/* NAVIGATION */
+
+.img_nav{
+	width: 130px; /* On défini une largeur */
+	height: auto;  /* La hauteur s'adapte automatiquement par rapport à la largeur */
+}
+
+nav ul li a h1{
+	font-size: 20px;
+}
+
+.li_nav1{
+	position: absolute; /* Position absolue par rapport au parent, ici UL */
+	top: 35%; /* Distance par rapport au haut */
+	left: 20%; /* Distance par rapport à la gauche */
+}
+
+.li_nav1 h1{
+	position: absolute;
+	top: 30%;
+	left: 5%;
+}
+
+.li_nav2{
+	position: absolute;
+	top: 35%;
+	left: 60%;
+}
+
+.li_nav2 h1{
+	position: absolute;
+	top: 30%;
+	left: -5%;
+}
+
+.li_nav3{
+	position: absolute;
+	top: 65%;
+	left: 20%;
+}
+
+.li_nav3 h1{
+	position: absolute;
+	top: 40%;
+	left: 15%;
+}
+
+.li_nav4{
+	position: absolute;
+	top: 65%;
+	left: 60%;
+}
+
+.li_nav4 h1{
+	position: absolute;
+	top: 30%;
+	left: -5%;
+}
+
+#p1_projet_nav ul li a h1{
+	font-size: 15px;
+}
+
+.p1_projet_img_nav{
+	visibility: hidden;
+}
+
+#p1_projet_nav ul li a h1{
+	visibility: visible;
+}
+
+#p1_projet_nav1{
+	left: -15%;
+	top: 15%;
+	position: absolute;
+}
+
+#p1_projet_nav2{
+	left: -6%;
+	top: 20%;
+	position: absolute;
+}
+
+#p1_projet_nav3{
+	left: -29.5%;
+	top: 25%;
+	position: absolute;
+}
+
+/* CONTENEUR */
+
+.p_index_section{
+	padding: 0 10% 0 10%;	
+	margin-top: 200%;
+	height: 100%;
+}
+
+#presentation_du_jeu{
+	margin-top: 150%;
+}
+
+.p_index_section h1{
+	padding-top: 5%;
+	font-size: 35px;
+}
+
+section .paragraphe{
+	font-size: 15px;
+	margin-top: -1%;
+}
+
+section .suivant{
+	font-size: 13px;
+	margin-top: -6%;
+	margin-right: 8%;
+}
+
+section .paragraphe a img{
+	margin-top: -6%;
+	width: 8%;
+}
+
+section .paragraphe a:hover img{
+	-webkit-transform: scale(1.6);
+}
+
+section .img_presentation{
+	margin-left: 14%;
+}
+
+section .img_presentation:hover{
+	-webkit-transform: scale(2.5);
+	-webkit-transition: all 0.5s ease;
+	margin-top: -5%;
+}
+
+#p1_projet_section ul a li{
+	background: none;
+}
+
+#p1_projet_section{
+	margin: 40% -15% 0 -15%;
+}
+
+#p1_projet_section ul li{
+	margin-bottom: 30%;
+}
+
+#p2_projet_section{
+	margin: 35% -5% 2% -5%;
+}
+
+#p2_projet_section h1{
+	font-size: 35px;
+}
+
+#p2_projet_section p{
+	font-size: 15px;
+}
+
+}
+
+@media screen and (min-width: 639px) and (max-width: 640px){
+/* BODY */
+
+body{
+	font-family: Tahoma, Helvetica;
+}
+
+#retour_menu{
+	margin-left: -2%;
+}
+
+#retour_menu p{
+    margin-left: -25%;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -100%;
+    padding-bottom: 15%;
+}
+
+/* HEADER */
+
+header{
+	padding: 0 10% 0 10%;
+	font-size: 40px;
+}
+
+/* NAVIGATION */
+
+.img_nav{
+	width: 130px; /* On défini une largeur */
+	height: auto;  /* La hauteur s'adapte automatiquement par rapport à la largeur */
+}
+
+nav ul li a h1{
+	font-size: 20px;
+}
+
+.li_nav1{
+	position: absolute; /* Position absolue par rapport au parent, ici UL */
+	top: 35%; /* Distance par rapport au haut */
+	left: 20%; /* Distance par rapport à la gauche */
+}
+
+.li_nav1 h1{
+	position: absolute;
+	top: 30%;
+	left: 5%;
+}
+
+.li_nav2{
+	position: absolute;
+	top: 35%;
+	left: 60%;
+}
+
+.li_nav2 h1{
+	position: absolute;
+	top: 30%;
+	left: -5%;
+}
+
+.li_nav3{
+	position: absolute;
+	top: 65%;
+	left: 20%;
+}
+
+.li_nav3 h1{
+	position: absolute;
+	top: 40%;
+	left: 15%;
+}
+
+.li_nav4{
+	position: absolute;
+	top: 65%;
+	left: 60%;
+}
+
+.li_nav4 h1{
+	position: absolute;
+	top: 30%;
+	left: -5%;
+}
+
+#p1_projet_nav ul li a h1{
+	font-size: 15px;
+}
+
+.p1_projet_img_nav{
+	visibility: hidden;
+}
+
+#p1_projet_nav ul li a h1{
+	visibility: visible;
+}
+
+#p1_projet_nav1{
+	left: -5%;
+	top: 12%;
+	position: absolute;
+}
+
+#p1_projet_nav2{
+	left: 1.5%;
+	top: 17%;
+	position: absolute;
+}
+#p1_projet_nav3{
+	left: -16%;
+	top: 22%;
+	position: absolute;
+}
+/* CONTENEUR */
+
+section{
+	padding: 0 10% 0 10%;	
+	margin-top: 200%;
+	height: 100%;
+}
+
+#presentation_du_jeu{
+	margin-top: 150%;
+}
+
+section h1{
+	padding-top: 5%;
+	font-size: 35px;
+}
+
+section .paragraphe{
+	font-size: 15px;
+	margin-top: -1%;
+}
+
+section .suivant{
+	font-size: 13px;
+	margin-top: -6%;
+	margin-right: 8%;
+}
+
+section .paragraphe a img{
+	margin-top: -6%;
+	width: 8%;
+}
+
+section .paragraphe a:hover img{
+	-webkit-transform: scale(1.6);
+}
+
+section .img_presentation{
+	margin-left: 14%;
+}
+
+section .img_presentation:hover{
+	-webkit-transform: scale(2.5);
+	-webkit-transition: all 0.5s ease;
+	margin-top: -5%;
+}
+
+#p1_projet_section{
+	margin: 40% -15% 0 -15%;
+}
+
+#p1_projet_section ul li{
+	margin-bottom: 40%;
+}
+
+#p2_projet_section{
+	margin: 35% -10% 2% -10%;
+}
+
+#p2_projet_section p{
+	font-size: 17px;
+}
+
+#p2_projet_section h1{
+	font-size: 40px;
+}
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 959px){ /* Partie utilisée pour la résolution d'écran indiquée */
+
+/* BODY */
+
+body{
+	font-family: Tahoma, Helvetica;
+}
+
+#retour_menu p{
+    margin-left: -25%;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -100%;
+    padding-bottom: 15%;
+}
+
+/* HEADER */
+
+header{
+	padding: 0 10% 0 10%;
+}
+
+/* NAVIGATION */
+
+.img_nav{
+	width: 60%; /* On défini une largeur */
+	height: auto;  /* La hauteur s'adapte automatiquement par rapport à la largeur */
+	z-index: 2;
+}
+
+nav ul li{
+	margin-bottom: 30%;
+}
+
+#p1_projet_nav{
+	margin-bottom: 0;
+}
+
+/* CONTENEUR */
+
+.p_index_section{
+	padding: 0 10% 0 10%;	
+	margin-top: 200%;
+	height: 100%;
+}
+
+.p_index_section h1{
+	font-size: 45px;
+}
+
+.p_index_section .paragraphe{
+	font-size: 17px;
+	margin-top: -1%;
+}
+
+.p_index_section .suivant{
+	font-size: 15px;
+	margin-top: -4%;
+	margin-right: 6%;
+}
+
+.p_index_section .paragraphe a img{
+	margin-top: -6%;
+	width: 8%;
+}
+
+.p_index_section .paragraphe a:hover img{
+	-webkit-transform: scale(1.6);
+}
+
+.p_index_section .img_presentation:hover{
+	-webkit-transform: scale(2.5);
+	-webkit-transition: all 0.5s ease;
+	margin-top: -5%;
+}
+
+#p1_projet_section{
+	margin: 30% -5% 0 5%;
+}
+
+#p1_projet_section ul li{
+	margin-bottom: 25%;
+}
+
+#p2_projet_section{
+	font-size: 17px;
+	margin-left: 8%;
+	margin-right: -10%;
+}
+
+}
+
+@media screen and (min-width: 960px) and (max-width: 1024px){
+
+/* BODY */
+
+body{
+	font-family: Tahoma, Helvetica;
+}
+
+#retour_menu img{
+	width: 120%;
+	margin-left: -25%;
+}
+
+#retour_menu p{
+    margin-left: -45%;
+    font-size: 17px;
+    text-align: center;
+    margin-top: -90%;
+
+}
+
+/* HEADER */
+
+header{
+	padding: 0 10% 0 10%;
+}
+
+/* NAVIGATION */
+
+.img_nav{
+	height: auto;
+	width: 50%;
+}
+
+nav ul li a h1{
+	margin-top: -50%;
+}
+
+.li_nav4{
+	position: relative;
+	margin-top: 20%;
+}
+
+
+/* CONTENEUR */
+
+.p_index_section{	
+	margin-top: 200%;
+	height: 100%;
+}
+
+.p_index_section h1{
+	font-size: 45px;
+}
+
+.p_index_section .paragraphe{
+	font-size: 17px;
+	margin-top: -1%;
+}
+
+#p1_projet_section{
+	margin-top: 18%;
+	margin-left: 5%;
+}
+
+#p2_projet_section{
+	font-size: 17px;
+	margin-left: 5%;
+	margin-right: -10%;
+}
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px){ /* Partie utilisée pour la résolution d'écran indiquée */
+
+/* BODY */
+
+body{
+	font-family: Cursive ,Tahoma, Helvetica;
+}
+
+#retour_menu p{
+    margin-left: -25%;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* NAVIGATION */
+
+.img_nav{
+	height: auto;
+	width: 60%;
+}
+
+nav ul li a h1{
+	margin-top: -50%;
+}
+
+.li_nav4{
+	position: relative;
+	margin-top: 10%;
+}
+
+/* CONTENEUR */
+
+#p1_projet_section{
+	margin-top: 18%;
+	overflow: hidden;
+}
+
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1366px){ /* Partie utilisée pour la résolution d'écran indiquée */
+
+/* BODY */
+
+#retour_menu p{
+    margin-left: -35%;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* NAVIGATION */
+
+nav ul li a h1{
+	margin-top: -45%;
+}
+
+.img_nav{
+	margin-top: -15%;
+	height: auto;
+	width: 55%;
+}
+
+.li_nav4{
+	position: relative;
+	margin-top: 10%;
+}
+
+/* CONTENEUR */
+
+section h1{
+	font-size: 45px;
+}
+
+section .paragraphe{
+	font-size: 16px;
+	margin-top: -1%;
+}
+
+section .img_presentation{
+	margin-top: 2%;
+	width: 25%;
+	height: auto;
+}
+
+section .img_presentation:hover{
+	-webkit-transform: scale(1.75);
+}
+
+#p1_projet_section{
+	margin-top: -3%;
+	overflow: hidden;
+}
+
+}
+@media screen and (min-width: 1367px) and (max-width: 1680px){ /* Partie utilisée pour la résolution d'écran indiquée */
+
+/* NAVIGATION */
+
+nav ul li a h1{
+	margin-top: -65%;
+}
+
+.img_nav{
+	margin-top: 15%;
+	height: auto;
+	width: 80%;
+	z-index: 2;
+}
+
+#p1_projet_section{
+	margin-top: 12%;
+	overflow: hidden;
+}
+
+/* CONTENEUR */
+
+.p_index_section .paragraphe{
+	margin: 1% 10% -4% 10%;
+}
+}

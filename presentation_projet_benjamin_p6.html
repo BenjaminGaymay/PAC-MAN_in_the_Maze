@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="image/icon.png" />
+
+        <title> PAC-MAN in the MAZE </title>
+    </head>
+
+    <body class="projet_body">
+        <header id="p1_projet_header"> 
+            <a href="index.html">
+                PAC-MAN in the MAZE
+            </a>
+        </header>
+
+        <nav id="p1_projet_nav">
+            <ul>
+                <li class="li_nav1" id="p1_projet_nav1"> 
+                    <a href="index.html#presentation_du_jeu"> 
+                        <img src="image/pac1.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du jeu 
+                        </h1>
+                    </a> 
+                </li>
+
+                <li class="li_nav2" id="p1_projet_nav2"> 
+                    <a href="index.html#presentation_du_projet"> 
+                        <img src="image/pac4.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du projet 
+                        </h1> 
+                    </a> 
+                </li>
+
+                <li class="li_nav3" id="p1_projet_nav3"> 
+                    <a href="index.html#evolutions"> 
+                        <img src="image/pac3.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Evolutions
+                        </h1>
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+
+    	<section id="p2_projet_section">
+            <h1>
+                CSS
+            </h1>
+
+    		<div class="paragraphe paragraphe_presentation">
+                <p>
+                   Le lien de téléchargement du site et de son code est disponible → <a href="https://www.dropbox.com/s/nq01ra878s09fgd/Site%20ISN.rar?dl=1"> ici </a> ←
+                </p>
+
+                <img src="image/css_1.png" class="projet_img_presentation">
+                
+                <p>
+                    Afin que le site s'adapte au plus de résolutions possibles, toutes les valeurs de positionnement ou de tailles se font en pourcentage. Comme indiqué dans les commentaires, les valeurs en pourcentage se font par rapport au parent. Je déclare donc que mon html fait 100% de la page.
+                </p>
+
+                <img src="image/css_2.png" class="projet_img_presentation">
+
+                <p>
+                    Le "body" prend ici toutes les caractéristiques que je lui affecte entre les deux accolades. <br>
+                    Il a donc une hauteur et une largeur de 100%, soit toute la place disponible, des polices d'écriture choisies dans l'ordre, le navigateur choisira en premier lieu la police "cursive", si l'utilisateur ne la possède pas il choisira alors "Tahoma" puis "Helvetica". <br> <br>
+                    Je choisis également de mettre un fond de couleur noir sur toute la page avec les lignes "background-color: black" et "background-size: 100% 100%". J'aurai pu choisir la couleur noire en hexadécimal par "#000000" ou en rgb par "rgb(0,0,0)" <br> <br>
+                    De même que pour le HTML, le CSS peut être répétitif. Je vais donc expliquer certaines parties parmi les plus intéressantes.
+                </p>
+
+                <img src="image/css_3.png" class="projet_img_presentation">
+
+                <p>
+                    Nous pouvons voir ici que j'utilise une "id". Elle correspond au fantôme de couleur orange permettant de revenir à la navigation de notre première page. <br>
+                    Juste après "#retour_menu" nous apercevons un "p" désignant toute balise "p" faisant partie de "#retour_menu". Cela permet de modifier uniquement les textes contenus dans cette unique balise. <br> <br>
+                    Dans son état basique le texte est donc invisible comme l'indique la seconde ligne. <br>
+                    Cette forme spéciale de "text-shadow" permet de placer plusieurs ombres en dessous de mon texte, en affectant des positions et des couleurs différentes à chacune d'entre elles. Cela a pour effet, avec des positions et couleurs judicieusement choisies, de créer un effet de perspective sur les lettres. <br> <br>
+                    "margin-top" et "margin-left" me permettent de placer ce texte par rapport à son parent. Les valeurs sont négatives car dans le HTML le texte est placé après l'image, il faut alors le remonter pour le centrer au mieux.
+                </p>
+
+                <img src="image/css_4.png" class="projet_img_presentation">
+
+                <p>
+                    Nous voyons maintenant la pseudo-classe "hover". Celle-ci permet de modifier, ou d'ajouter des caractéristiques  à un élément au survol. Par exemple ici on rend le texte visible.
+                </p>
+
+                <img src="image/css_5.png" class="projet_img_presentation">
+
+                <p>
+                    Il est également possible de définir une durée et une méthode d'évolution entre l'état initial et celui après le "hover", avec "transition" et "brightness" par exemple. Il existe également "transform" qui nous permet de modifier la taille d'une image.
+
+                </p>
+
+                <img src="image/css_6.png" class="projet_img_presentation">
+
+                <p>
+                    Les deux images ci-dessus permettent donc de changer la luminosité de l'image pour la divisée par deux, puis lorsque l'utilisateur la survole, elle retrouve sa couleur d'origine, en augmentant uniformément durant une durée de 0.3 seconde. <br> <br>
+                    Il est à noter que chaque navigateur possède son propre préfixe. Ici j'utilise "-webkit-" qui est celui de google chrome. Ces animations ne seront donc pas visibles sur mozilla par exemple, pour cela j'aurais dû réécrire ces lignes avec le préfixe "-moz-".
+                </p>
+
+                <img src="image/css_7.png" class="projet_img_presentation">
+
+                <p>
+                    Pour finir, nous allons nous intéresser à l'effet au survol sur la page du choix des comptes rendus. <br> <br>
+                    Les caractéristiques utilisées pour cela sont "border" pour affecter la couleur bleue à la bordure, "color" rendre le texte jaune, "background-size" qui permet à l'image de prendre toute la hauteur disponible (100%) en gardant sa largeur (auto) et "background-position" pour placer ce fond à 1% du coté gauche.
+                </p>
+
+                <img src="image/css_8.png" class="projet_img_presentation">
+
+                <p>
+                    Lorsque l'on survol cet élément on intervertit alors les couleurs des bordures et du texte, en plaçant le fond à 99% du coté gauche (donc à droite). Le tout durant un délai de 1 seconde avec la "transition".
+                </p>
+
+                <a href="presentation_projet_benjamin_p5.html#p1_projet_header"> 
+                    <img src="image/precedent.png" class="img_precedent">
+
+                    <p class="precedent">
+                        Page précedente
+                    </p>
+                </a>
+
+                <a href="presentation_projet_benjamin_p7.html#p1_projet_header"> 
+                    <img src="image/suivant.png" class="img_suivant">
+
+                    <p class="suivant">
+                        Page suivante
+                    </p>
+                </a>
+            </div>
+    	</section>
+    </body>
+</html>

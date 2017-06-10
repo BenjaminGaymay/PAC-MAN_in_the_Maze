@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="image/icon.png" />
+
+        <title> PAC-MAN in the MAZE </title>
+    </head>
+
+    <body class="projet_body">
+        <header id="p1_projet_header"> 
+            <a href="index.html">
+                PAC-MAN in the MAZE
+            </a>
+        </header>
+
+        <nav id="p1_projet_nav">
+            <ul>
+                <li class="li_nav1" id="p1_projet_nav1"> 
+                    <a href="index.html#presentation_du_jeu"> 
+                        <img src="image/pac1.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du jeu 
+                        </h1>
+                    </a> 
+                </li>
+
+                <li class="li_nav2" id="p1_projet_nav2"> 
+                    <a href="index.html#presentation_du_projet"> 
+                        <img src="image/pac4.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du projet 
+                        </h1> 
+                    </a> 
+                </li>
+
+                <li class="li_nav3" id="p1_projet_nav3"> 
+                    <a href="index.html#evolutions"> 
+                        <img src="image/pac3.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Evolutions
+                        </h1>
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+
+        <section id="p2_projet_section">
+            <h1>
+                Sort Pousser
+            </h1>
+
+            <div class="paragraphe">
+                <p>
+                    Pour le sort pousser il a fallu créer deux fonctions : <br>
+                    - La première permettant au joueur de cibler le mur qu'il veut pousser.
+                    Cette fonction se décompose en deux parties la première permettant de vérifier si le cooldown mis en place pour ce sort ne soit  pas actif ce qui empêche sinon la possibilité d'utiliser le sort.
+                </p>
+
+                <img src="image/sort_pousser_1.png" class="projet_img_presentation">
+
+                <p>
+                    - La deuxième partie de la fonction quant à elle, une fois le cooldown vérifié s'occupe de créer des blocs de sélection   qui se placent autour du personnage sur les cases contenants des blocs. Quand le joueur cliquera sur un de ces blocs de sélection, le programme effectuera ensuite la deuxième fonction.
+                </p>
+
+                <img src="image/sort_pousser_2.png" class="projet_img_presentation">
+
+                <p>
+                    - Vient donc ensuite la deuxième fonction qui va permettre d'effectuer l'action propre au sort.
+                    Pour cela on récupère dans un premier temps les coordonnées de la souris pour savoir quel bloc le joueur a ciblé.
+                </p>
+
+                <img src="image/sort_pousser_3.png" class="projet_img_presentation">
+
+                <p>
+                    On stock ces coordonnées dans une variable et on crée une autre variable qui permettra de vérifier si la case située derrière le bloc ciblé est vide. Ensuite on choisit en fonction des coordonnées l'une des quatre fonctions propre à chaque position (haut, bas ...). Dans chacune de ces fonctions on vérifie si le joueur a bien sélectionné un bloc et si la case suivant ce bloc est bien vide. Si ces conditions sont remplies alors on supprime ce bloc et on utilise la fonction mur pour créer un mur sur la case vide précédemment vérifiée si les conditions ne sont pas remplis alors cela annule la fonction. 
+                </p>
+
+                <img src="image/sort_pousser_4.png" class="projet_img_presentation">
+
+                <p>
+                    Et voila il n'y a plus qu'à incrémenter la fonction dans la fonction permettant de choisir les sorts.
+                </p>
+
+                <img src="image/sort_pousser_5.png" class="projet_img_presentation">
+                <br>
+                <img src="image/sort_pousser_6.png" class="projet_img_presentation">
+
+                <a href="presentation_projet_nathan_p1.html#p1_projet_header"> 
+                    <img src="image/precedent.png" class="img_precedent">
+
+                    <p class="precedent">
+                        Page précedente
+                    </p>
+                </a>
+
+                <a href="presentation_projet_nathan_p3.html#p1_projet_header"> 
+                    <img src="image/suivant.png" class="img_suivant">
+
+                    <p class="suivant">
+                        Page suivante
+                    </p>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>

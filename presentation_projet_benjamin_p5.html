@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="image/icon.png" />
+
+        <title> PAC-MAN in the MAZE </title>
+    </head>
+
+    <body class="projet_body">
+        <header id="p1_projet_header"> 
+            <a href="index.html">
+                PAC-MAN in the MAZE
+            </a>
+        </header>
+
+        <nav id="p1_projet_nav">
+            <ul>
+                <li class="li_nav1" id="p1_projet_nav1"> 
+                    <a href="index.html#presentation_du_jeu"> 
+                        <img src="image/pac1.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du jeu 
+                        </h1>
+                    </a> 
+                </li>
+
+                <li class="li_nav2" id="p1_projet_nav2"> 
+                    <a href="index.html#presentation_du_projet"> 
+                        <img src="image/pac4.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Présentation du projet 
+                        </h1> 
+                    </a> 
+                </li>
+
+                <li class="li_nav3" id="p1_projet_nav3"> 
+                    <a href="index.html#evolutions"> 
+                        <img src="image/pac3.png" class="p1_projet_img_nav"> 
+                        <h1> 
+                            Evolutions
+                        </h1>
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+
+    	<section id="p2_projet_section">
+            <h1>
+                HTML
+            </h1>
+
+    		<div class="paragraphe paragraphe_presentation">
+                <p>
+                   Du coté du site, j'ai entièrement codé le HTML ansi que le CSS. <br>
+                   Le lien de téléchargement du site et de son code est disponible → <a href="https://www.dropbox.com/s/nq01ra878s09fgd/Site%20ISN.rar?dl=1"> ici </a> ←
+                </p>
+
+                <img src="image/html_1.png" class="projet_img_presentation">
+                
+                <p>
+                    Tout d'abord, on défini dans le "head" les caractéristiques de la page, mais elles ne sont pas visibles pour l’utilisateur. <br>
+                    "meta" permet d’annoncer au navigateur que les caractères sont en UTF-8. <br>
+                    Les deux "link" permettent de lier une page CSS nommée "style.css" et une icône (qui est affichée dans l’onglet du navigateur) à notre page html. <br>
+                    "title" est le nom de la page visible dans l’onglet du navigateur.
+                </p>
+
+                <img src="image/html_2.png" class="projet_img_presentation">
+
+                <p>
+                    Le code HTML est très simple et se répète beaucoup, je vais donc uniquement commenter la partie traitant de la navigation ci-dessus, qui regroupe les éléments les plus intéressants. <br> <br>
+                    Tout d'abord, "nav" est une balise intégrée en CCS3 désignant la navigation du site. <br> <br>
+                    Afin de faciliter le positionnement des mes liens dans cette "nav" je les place sous forme de liste avec la balise "ul" qui indique ce qui fait parti de la liste, et des balises "li" qui désignent chacune des lignes de celle-ci. <br> <br>
+                    Ensuite, la balise "a" me permet de créer un lien redirigeant vers le site, ou la page, de l'url indiqué par "href". <br> <br>
+                    "img" est une image se trouvant à l'url défini par "src", et "h1" est texte de type grand titre. 
+                </p>
+
+                <img src="image/html_3.png" class="projet_img_presentation">
+
+                <p>
+                    "img" et "h1" se trouvant entre les balises "a" et "/a" sont tous deux un seul et même lien (celui défini précédemment par "href"). <br> <br>
+                    Vous pouvez également voir dans plusieurs de ces balises des "class" et des "id". Les "class" correspondent à des noms communs entre plusieurs éléments.  
+                </p>
+
+                <img src="image/html_4.png" class="projet_img_presentation">
+
+                <p>
+                    Par exemple, ici, toutes les images se nomment "p1_projet_img_nav" ce qui me permet par la suite, dans le CSS, de définir une seule fois leurs caractéristiques communes.
+                </p>
+
+                <img src="image/html_5.png" class="projet_img_presentation">
+
+                <p>
+                    En revanche, la "nav" possède une "id" qui est un nom unique. Elle est la seule à se prénommer comme cela et je ne modifierai qu'elle dans le CSS.
+                </p>
+                <a href="presentation_projet_benjamin_p4.html#p1_projet_header"> 
+                    <img src="image/precedent.png" class="img_precedent">
+
+                    <p class="precedent">
+                        Page précedente
+                    </p>
+                </a>
+
+                <a href="presentation_projet_benjamin_p6.html#p1_projet_header"> 
+                    <img src="image/suivant.png" class="img_suivant">
+
+                    <p class="suivant">
+                        Page suivante
+                    </p>
+                </a>
+            </div>
+    	</section>
+    </body>
+</html>
